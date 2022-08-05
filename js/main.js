@@ -26,23 +26,6 @@ $(function () {
 		loop: true
 	});
 
-	/* Youtube video background */
-	var myPlayer = $("#video-bg").YTPlayer();
-
-	/* Smoothscroll */
-	if($('.section.started').length) {
-		$(window).on('scroll', function(){
-			var scrollPos = $(window).scrollTop();
-			$('.top-menu ul li a').each(function () {
-				var currLink = $(this);
-				var refElement = $(currLink.attr("href"));
-				if (refElement.offset().top <= scrollPos) {
-					$('.top-menu ul li').removeClass("active");
-					currLink.closest('li').addClass("active");
-				}
-			});
-		});
-	}
 
 	/* Top Menu */
 	if($('.section.started').length) {
@@ -84,17 +67,6 @@ $(function () {
 		}
 	});
 
-	/* Pause/Play video on scroll */
-	if ($('#video-bg').length) {
-		$(window).on('scroll', function() {
-			if ($(this).scrollTop() >= height-10) {
-				$('#video-bg').YTPPause();
-			}
-			if ($(this).scrollTop() <= height-10) {
-				$('#video-bg').YTPPlay();
-			}
-		});
-	}
 	
 	/* On click mouse button, page scroll down */
 	$('.section').on('click', '.mouse-btn', function() {
