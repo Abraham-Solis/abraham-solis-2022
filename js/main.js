@@ -1,7 +1,3 @@
-/**
-*	Hendrix (HTML)
-*	Copyright © Hendrix by beshleyua. All Rights Reserved.
-**/
 
 $(function () {
 	'use strict';
